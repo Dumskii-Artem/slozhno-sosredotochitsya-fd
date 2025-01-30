@@ -9,8 +9,101 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+    --page-bg-color: var(--dark_page_bg);
+    --accent-color: var(--dark-accent);
+    --title-color: var(--dark-title);
+    --header_text-bg-color: var(--dark-header-text_bg);
+    --header_text-color: var(--dark-header_text-color);
+    --question-bg-color: var(--dark-question-bg-color);
+    --question-color: var(--dark-question-color);
+    --answer-title-bg-color: var(--dark-answer-title-bg-color);
+    --answer-title-color: var(--dark-answer-title-color);
+    --answer-text-bg-color: var(--dark-answer-text-bg-color);
+    --answer-text-color: var(--dark-answer-text-color);
+    --advice-title-bg-color: var(--dark-advice-title-bg-color);
+    --advice-title-color: var(--dark-advice-title-color);
+    --button-color: var(--dark-button-color);
+    --border-color-opacity: #FF007066;
+
+
+
 }
 
 .theme-dark .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
+
+.theme-dark .rec_empty {
+  align-self: flex-start;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  justify-self: end;
+  color: var(--accent-color);
+  font-size: var(--regular-font-size);
+  text-transform: uppercase;
+  line-height: 25px;
+  top: 20px;
+  right: 20px;
+}
+
+.theme-dark .rec_empty::before {
+  content: 'REC';
+  display: inline-block;
+  color: var(--rec-color);
+}
+
+.theme-dark .rec_empty::after {
+  content: '';
+  display: inline-block;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--rec-color);
+  margin-left: 5px;
+  align-self: center;
+  margin-inline-end: 9px;
+  box-shadow: 0px 0px 4px 2px rgba(255, 0, 112, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --page-bg-color: var(--dark_page_bg);
+  --accent-color: var(--dark-accent);
+  --title-color: var(--dark-title);
+  --header_text-bg-color: var(--dark-header-text_bg);
+  --header_text-color: var(--dark-header_text-color);
+  --question-bg-color: var(--dark-question-bg-color);
+  --question-color: var(--dark-question-color);
+  --answer-title-bg-color: var(--dark-answer-title-bg-color);
+  --answer-title-color: var(--dark-answer-title-color);
+  --answer-text-bg-color: var(--dark-answer-text-bg-color);
+  --answer-text-color: var(--dark-answer-text-color);
+  --advice-title-bg-color: var(--dark-advice-title-bg-color);
+  --advice-title-color: var(--dark-advice-title-color);
+  --button-color: var(--dark-button-color);
+  --border-color-opacity: #FF007066;
+  }
+
+  .rec_empty {
+    justify-self: end;
+  }
+  
+  .rec_empty::before {
+    content: 'REC';
+    display: inline-block;
+    color: var(--rec-color);
+  }
+  
+  .rec_empty::after {
+    content: '';
+    display: inline-block;
+    inline-size: 9px;
+    block-size: 9px;
+    border-radius: 50%;
+    background-color: var(--rec-color);
+    margin-left: 5px;
+  }
+}
+

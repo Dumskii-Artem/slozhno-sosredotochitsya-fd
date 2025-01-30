@@ -2,4 +2,290 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: IBM Plex mono;
+  font-weight: bold;
+  background-color: var(--page-bg-color);
+  padding: 0 10px;
+}
+
+.header {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  grid-template-columns: 1fr 1fr;
+  position: relative; /* это для уголочков */
+  align-items: center;
+  padding: 10px;
+}
+
+.header_text {
+  grid-row: 3 / 5;
+  grid-column: 1 / 3;
+}
+
+/* МЕНЮ */
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  padding: 4px 13px;
+  background-color: inherit;
+  border: none;
+  font-size: var(--regular-font-size);
+  line-height: var(--regular-line-height);
+  text-transform: lowercase;
+  color: var(--button-color);
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--button-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--button-color);
+}
+
+.header__theme-menu-button:hover:not(.header__theme-menu-button_active) {
+  border: 1px solid var(--border-color-opacity);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+/* МЕНЮ w1 w2 */
+.header__theme-menu {
+  grid-column: 1 / 3;
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+}
+
+/*уголочки*/
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-top: 5px solid var(--dark-red);
+  border-right: 5px solid var(--dark-red);
+  top: 20px;
+  right: 20px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-bottom: 5px solid var(--dark-red);
+  border-left: 5px solid var(--dark-red);
+  bottom: 20px;
+  left: 20px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+/* GALLERY вариант mobile */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__item {
+  margin: 0;
+}
+
+/* GALLERY вариант 2 и 3 */
+@media (min-width: 768px) {
+  .header {
+    padding: 20px;
+  }
+
+  .header_text {
+    grid-column: 2 / 3;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 4em 4em;
+  }
+
+  /*sunset*/
+  .gallery__item:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+
+  /*ice-cream*/
+  .gallery__item:nth-child(2) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
+
+  /*tape*/
+  .gallery__item:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+
+  /*books*/
+  .gallery__item:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  /*street*/
+  .gallery__item:nth-child(5) {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+  }
+}
+
+/* шрифты */
+.header_text {
+  font-size: var(--regular-font-size);
+  line-height: 1.3;
+  width: 100%;
+  color: var(--header_text-color);
+  background-color: var(--header_text-bg-color);
+}
+
+
+.question {
+  font-size: var(--regular-font-size);
+  line-height: 1.3;
+  width: 100%;
+  color: var(--question-color);
+  background-color: var(--question-bg-color); 
+}
+
+
+.title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 0.825;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--title-color);
+  grid-column: 1 / 3;
+}
+
+.answer_title {
+  color: var(--answer-title-color);
+  background-color: var(--answer-title-bg-color); 
+}
+
+.answer_text {
+  color: var(--answer-text-color);
+  background-color: var(--answer-text-bg-color); 
+}
+
+.advice_title {
+  font-size: var(--regular-font-size);
+  line-height: 1.3;
+  width: 100%; 
+  font-weight: normal;
+  color: var(--advice-title-color);
+  background-color: var(--advice-title-bg-color);
+}
+
+/*средненько*/
+@media (min-width: 768px) {
+  .page {
+    background-color: yellow;
+  }
+
+  .header_text {
+    grid-column: 2 / 3;
+  }
+
+  .div_1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+    'question_1 answers_1';
+    gap: 10px;
+  }
+
+  .div_2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .div_3 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+    'question_3 answers_3';
+    gap: 10px;
+  }
+}
+
+/*прям большой*/
+@media (min-width: 1000px) {
+  .page {
+    background-color: mediumaquamarine;
+  }
+
+  /* МЕНЮ  w3 */
+  .header__theme-menu {
+    align-self: start;
+    justify-self: center;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  /* меню горизонтально */
+  .header__theme-menu-list {
+    grid-auto-flow: column;
+  }
+
+  .title {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+
+  .div_2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "question_2 ."
+      "answers_2 answers_2";
+    gap: 10px;
+  }
+
+  .question_2 {
+    display: block;
+    width: 100%;
+    grid-area: question_2;
+  }
+
+  .answers_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    grid-area: answers_2;
+  }
 }

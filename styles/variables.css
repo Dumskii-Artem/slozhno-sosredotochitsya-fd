@@ -2,3 +2,47 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --light-pink-1: #FF8DCB;
+  --light-pink-2: #FFC2E6;
+  --light-pink-bg: #FFF1F7;
+  --dark-red: #ff0070;
+  --dark-black: #000028;
+  --light-black: #353430;
+
+  --dark_page_bg: blue;
+/*  --dark_page_bg: var(--dark-black);*/
+  --dark-title: #db00ff;
+  --dark-accent: var(--dark-red);
+  --dark-header-text_bg: var(--dark-red);
+  --dark-header_text-color: var(--dark-black);
+  --dark-question-bg-color: var(--dark-red);
+  --dark-question-color: var(--dark-black);
+  --dark-answer-title-bg-color: var(--dark-red);
+  --dark-answer-title-color: var(--dark-black);
+  --dark-answer-text-bg-color: var(--dark-black);
+  --dark-answer-text-color: #f1b2ce;
+  --dark-advice-title-bg-color: var(--dark-red);
+  --dark-advice-title-color: var(--dark-black);
+  --rec-color: var(--dark-red);
+  --dark-button-color: var(--dark-red);
+
+  --light_page_bg: rgb(75, 200, 96);
+ /* --light_page_bg: var(--light-pink-bg);*/
+  --light-title: var(--light-pink-2);
+  --light-accent: var(--light-pink-1);
+  --light-header-text_bg: var(--light-pink-1);
+  --light-header_text-color: var(--light-black);
+  --light-question-bg-color: var(--light-pink-bg);
+  --light-question-color: var(--light-black);
+  --light-answer-title-bg-color: var(--light-pink-1);
+  --light-answer-title-color: var(--light-black);
+  --light-answer-text-bg-color: var(--light-pink-bg);
+  --light-answer-text-color: var(--light-black);
+  --light-advice-title-bg-color: var(--light-pink-1) ;
+  --light-advice-title-color: var(--light-black);
+  --light-button-color: var(--light-black);
+
+  --regular-font-size: 18px;
+  --regular-line-height: 100%;
+}
