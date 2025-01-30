@@ -4,24 +4,31 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   font-family: IBM Plex mono;
   font-weight: bold;
+  font-size: var(--regular-font-size);
+  line-height: 1.3;
   background-color: var(--page-bg-color);
-  padding: 0 10px;
-  background-attachment: fixed
+  background-attachment: fixed;
+  background-image: var(--background-image);
 }
 
 .header {
-  height: 100vh;
+  height: max(100vh, var(--min-height));
+  font: inherit;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   position: relative; /* это для уголочков */
   align-items: center;
-  padding: 10px;
+  padding: var(--decoration-gap) 0;
 }
 
 .header_text {
-  grid-row: 3 / 5;
-  grid-column: 1 / 3;
+  background-color: var(--header_text-bg-color);
+  color: var(--header_text-color);
+  font-weight: bold;
+  font-size: inherit;
+  margin: var(--decoration-gap);
+  font: inherit;
 }
 
 /* МЕНЮ */
@@ -60,16 +67,16 @@
   outline: none;
 }
 
+.rec_empty {
+  position: absolute;
+}
+
 /* МЕНЮ w1 w2 */
 .header__theme-menu {
-  grid-column: 1 / 3;
   justify-self: end;
+  margin: auto var(--decoration-gap);
 }
-/*
-.header__theme-menu-list {
-  display: grid;
-  gap: 10px;
-}*/
+
 
 /*уголочки*/
 
@@ -78,10 +85,10 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border-top: 5px solid var(--dark-red);
-  border-right: 5px solid var(--dark-red);
-  top: 20px;
-  right: 20px;
+  border-top: 1px solid var(--dark-red);
+  border-right: 1px solid var(--dark-red);
+  top: var(--decoration-gap);
+  right: var(--decoration-gap);
 }
 
 .decorated-zone::after {
@@ -89,22 +96,50 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border-bottom: 5px solid var(--dark-red);
-  border-left: 5px solid var(--dark-red);
-  bottom: 20px;
-  left: 20px;
+  border-bottom: 1px solid var(--dark-red);
+  border-left: 1px solid var(--dark-red);
+  left: var(--decoration-gap);
+  bottom: var(--decoration-gap);
 }
 
-.content {
+.main {
+  margin-left: var(--decoration-gap);
+  margin-right: var(--decoration-gap);
+}
+
+.section {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
+/*  margin-top: 40px;*/
+}
+
+.section:first-child {
+  margin-top: var(--section-child-margin);
+}
+
+.section_2 {
+  margin-top: 50px;
+}
+
+.section_3 {
+  margin-top: 50px;
+}
+
+.advice_title_main {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.advice_title {
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 /* GALLERY вариант mobile */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 10px;
 }
 
 .gallery__image {
@@ -117,6 +152,11 @@
   margin: 0;
 }
 
+.picture_question {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
 .footer {
   height: 100vh;
   min-height: 668px;
@@ -124,7 +164,7 @@
   display: grid;
 }
 /* GALLERY вариант 2 и 3 */
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .header {
     padding: 20px;
   }
@@ -167,15 +207,6 @@
 }
 
 /* шрифты */
-.header_text {
-  grid-column: 2 / 3;
-  font-size: var(--regular-font-size);
-  line-height: 1.3;
-  width: 100%;
-  color: var(--header_text-color);
-  background-color: var(--header_text-bg-color);
-}
-
 
 .question {
   font-size: var(--regular-font-size);
@@ -186,22 +217,37 @@
 }
 
 
-.title {
+.huge_title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 0.825;
   text-shadow: 4px 4px 0 var(--accent-color);
   color: var(--title-color);
-  grid-column: 1 / 3;
+  margin-left: var(--header-margin-left);
+}
+
+.footer_title {
+  height: max(100vh, var(--min-height));
+  display: flex;
+  align-items: center;
+  margin-top: 52px;  
 }
 
 .answer_title {
   color: var(--answer-title-color);
   background-color: var(--answer-title-bg-color);
+  font-size: inherit;
 }
 
 .answer_text {
   color: var(--answer-text-color);
   background-color: var(--answer-text-bg-color);
+}
+
+.answer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
 }
 
 .advice_title {
@@ -213,8 +259,26 @@
   background-color: var(--advice-title-bg-color);
 }
 
+.simple_link {
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--accent-color);
+}
+
+.simple_link:focus {
+  outline: none;
+}
+
+.simple_link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.simple_link:hover {
+  border-bottom: 1px solid currentColor;
+  cursor: pointer;
+}
+
 /*средненько*/
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .page {
     background-color: yellow;
   }
@@ -223,7 +287,7 @@
     grid-column: 2 / 3;
   }
 
-  .div_1 {
+  .section_1 {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
@@ -231,13 +295,13 @@
     gap: 10px;
   }
 
-  .div_2 {
+  .section_2 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
   }
 
-  .div_3 {
+  .section_3 {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
@@ -247,7 +311,7 @@
 }
 
 /*прям большой*/
-@media (min-width: 1000px) {
+@media (width >= 1024px) {
   .page {
     background-color: mediumaquamarine;
   }

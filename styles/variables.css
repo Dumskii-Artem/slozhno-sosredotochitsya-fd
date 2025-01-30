@@ -16,8 +16,8 @@
   --dark-accent: var(--dark-red);
   --dark-header-text_bg: var(--dark-red);
   --dark-header_text-color: var(--dark-black);
-  --dark-question-bg-color: var(--dark-red);
-  --dark-question-color: var(--dark-black);
+  --dark-question-bg-color: var(--dark-black);
+  --dark-question-color: var(--dark-red);
   --dark-answer-title-bg-color: var(--dark-red);
   --dark-answer-title-color: var(--dark-black);
   --dark-answer-text-bg-color: var(--dark-black);
@@ -45,4 +45,10 @@
 
   --regular-font-size: 18px;
   --regular-line-height: 100%;
+  --regular-gap: 10px;
+  --decoration-gap: clamp(10px , 2.65vw , 20px);
+  --min-height: 668px;
+  --header-margin-left: min(10px , 20px - 2.6vw);
+  --section-child-margin: 40px;
 }
+

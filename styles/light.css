@@ -24,6 +24,7 @@
   --advice-title-color: var(--light-advice-title-color);
   --button-color: var(--light-button-color);
   --border-color-opacity: #32312D66;
+  --background-image:  url("../images/cover-image-light.png");
 
 
 }
@@ -50,6 +51,7 @@
     --advice-title-color: var(--light-advice-title-color);
     --button-color: var(--light-button-color);
     --border-color-opacity: #32312D66;
+    --background-image:  url("../images/cover-image-light.png");
 
   }
 }
