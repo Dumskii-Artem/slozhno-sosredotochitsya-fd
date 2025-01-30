@@ -6,6 +6,7 @@
   font-weight: bold;
   background-color: var(--page-bg-color);
   padding: 0 10px;
+  background-attachment: fixed
 }
 
 .header {
@@ -64,11 +65,11 @@
   grid-column: 1 / 3;
   justify-self: end;
 }
-
+/*
 .header__theme-menu-list {
   display: grid;
   gap: 10px;
-}
+}*/
 
 /*уголочки*/
 
@@ -116,14 +117,16 @@
   margin: 0;
 }
 
+.footer {
+  height: 100vh;
+  min-height: 668px;
+  padding: 10px;
+  display: grid;
+}
 /* GALLERY вариант 2 и 3 */
 @media (min-width: 768px) {
   .header {
     padding: 20px;
-  }
-
-  .header_text {
-    grid-column: 2 / 3;
   }
 
   .gallery {
@@ -165,6 +168,7 @@
 
 /* шрифты */
 .header_text {
+  grid-column: 2 / 3;
   font-size: var(--regular-font-size);
   line-height: 1.3;
   width: 100%;
@@ -178,7 +182,7 @@
   line-height: 1.3;
   width: 100%;
   color: var(--question-color);
-  background-color: var(--question-bg-color); 
+  background-color: var(--question-bg-color);
 }
 
 
@@ -192,18 +196,18 @@
 
 .answer_title {
   color: var(--answer-title-color);
-  background-color: var(--answer-title-bg-color); 
+  background-color: var(--answer-title-bg-color);
 }
 
 .answer_text {
   color: var(--answer-text-color);
-  background-color: var(--answer-text-bg-color); 
+  background-color: var(--answer-text-bg-color);
 }
 
 .advice_title {
   font-size: var(--regular-font-size);
   line-height: 1.3;
-  width: 100%; 
+  width: 100%;
   font-weight: normal;
   color: var(--advice-title-color);
   background-color: var(--advice-title-bg-color);
