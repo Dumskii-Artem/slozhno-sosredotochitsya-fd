@@ -130,10 +130,7 @@
   margin-bottom: 20px;
 }
 
-.advice_title {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
+
 
 /* GALLERY вариант mobile */
 .gallery {
@@ -229,7 +226,7 @@
   height: max(100vh, var(--min-height));
   display: flex;
   align-items: center;
-  margin-top: 52px;  
+  margin-top: 52px;
 }
 
 .answer_title {
@@ -257,11 +254,13 @@
   font-weight: normal;
   color: var(--advice-title-color);
   background-color: var(--advice-title-bg-color);
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .simple_link {
-  text-decoration: none;
   text-shadow: 2px 1px 0 var(--accent-color);
+  text-decoration: none;
 }
 
 .simple_link:focus {
