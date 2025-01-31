@@ -26,8 +26,7 @@
   --rec-color: var(--dark-red);
   --dark-button-color: var(--dark-red);
 
-  --light_page_bg: rgb(75, 200, 96);
- /* --light_page_bg: var(--light-pink-bg);*/
+  --light_page_bg: var(--light-pink-bg);
   --light-title: var(--light-pink-2);
   --light-accent: var(--light-pink-1);
   --light-header-text_bg: var(--light-pink-1);

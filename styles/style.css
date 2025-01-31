@@ -286,7 +286,7 @@ footer.decorated-zone::before {
 /*средненько*/
 @media (width >= 768px) {
   .page {
-    background-color: yellow;
+    background-color: var(--page-bg-color);
   }
 
   .header_text {
@@ -319,7 +319,7 @@ footer.decorated-zone::before {
 /*прям большой*/
 @media (width >= 1024px) {
   .page {
-    background-color: mediumaquamarine;
+    background-color: var(--page-bg-color);
   }
 
   /* МЕНЮ  w3 */
