@@ -297,6 +297,13 @@ footer.decorated-zone::before {
     background-color: var(--page-bg-color);
   }
 
+  .header {
+    /*    padding: 20px;*/
+/*        margin-block-end: 40px;*/
+        --min-height: 768px;
+      }
+    
+
   .header_text {
     width:  calc(50% - 20px);
     justify-self: right;
@@ -363,10 +370,11 @@ footer.decorated-zone::before {
 
   /* МЕНЮ  w3 */
   .header__theme-menu {
-    align-self: start;
+    height: 100%;
+    display: flex;
     justify-self: center;
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
+    flex-direction: column;
+    align-self: start;
   }
 
   /* меню горизонтально */
