@@ -10,8 +10,7 @@
   --dark-black: #000028;
   --light-black: #353430;
 
-  --dark_page_bg: blue;
-/*  --dark_page_bg: var(--dark-black);*/
+  --dark_page_bg: var(--dark-black);
   --dark-title: #db00ff;
   --dark-accent: var(--dark-red);
   --dark-header-text_bg: var(--dark-red);
