@@ -26,6 +26,7 @@
     --border-color-opacity: #FF007066;
     --background-image:  url("../images/cover-image-dark.png");
 
+    --rec_empty_x_pos: 20px;
 
 
 }
@@ -41,7 +42,13 @@
   line-height: 25px;
   position: absolute;
   top: 0;
-  right: 20px;
+  right: var(--rec_empty_x_pos);
+}
+
+@media (width >= 768px) {
+  .theme-dark .rec_empty {
+    --rec_empty_x_pos: 30px;
+  }
 }
 
 .theme-dark .rec_empty::before {
