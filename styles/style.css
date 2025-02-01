@@ -13,6 +13,8 @@
 
 .header {
   height: max(100vh, var(--min-height));
+/*  height: 100vh;
+  min-height: 668px;*/
   font: inherit;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
@@ -114,7 +116,7 @@ footer.decorated-zone::before {
 .section {
   display: grid;
   grid-template-columns: 1fr;
-/*  margin-top: 40px;*/
+  margin-top: 40px;
 }
 
 .section_1: {
@@ -161,8 +163,6 @@ footer.decorated-zone::before {
 
 .footer {
   height: max(100vh, var(--min-height));
-/*  height: 100vh;
-  min-height: 668px;*/
   padding: 10px;
   position: relative;
 }
@@ -237,10 +237,11 @@ footer.decorated-zone::before {
 }
 
 .footer_title {
-  height: max(100vh, var(--min-height));
+ /* height: max(100vh, var(--min-height));*/
+  height: 100%;
   display: flex;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .answer_title {
