@@ -355,7 +355,7 @@ footer.decorated-zone::before {
   }
 
   .footer {
-    height: 100%;
+    --min-height: 1024x;
   }
 
   .footer_title {
@@ -462,5 +462,10 @@ footer.decorated-zone::before {
 
   .footer_title {
     margin-top: 40px;
-}
+  }
+
+  .footer {
+    --min-height: 768px;
+  }
+
 }
