@@ -215,7 +215,7 @@ footer.decorated-zone::before {
     grid-column: 2 / 4;
     grid-row: 3 / 4;
   }
-}
+
 
 /* шрифты */
 
@@ -293,7 +293,7 @@ footer.decorated-zone::before {
 }
 
 /*средненько*/
-@media (width >= 768px) {
+/*@media (width >= 768px) {*/
   .page {
     background-color: var(--page-bg-color);
   }
@@ -345,10 +345,6 @@ footer.decorated-zone::before {
 
   footer.decorated-zone::after {
     bottom: 40px;
-  }
-
-  .footer {
-    --min-height: 1024x;
   }
 
   .footer_title {
