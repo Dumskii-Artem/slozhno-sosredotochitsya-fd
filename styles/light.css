@@ -9,22 +9,23 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --accent-color: var(--light-accent);
-  --title-color: var(--light-title);
-  --page-bg-color: var(--light_page_bg);
-  --header_text-bg-color: var(--light-header-text_bg);
-  --header_text-color: var(--light-header_text-color);
-  --question-bg-color: var(--light-question-bg-color);
-  --question-color: var(--light-question-color);
-  --answer-title-bg-color: var(--light-answer-title-bg-color);
-  --answer-title-color: var(--light-answer-title-color);
-  --answer-text-bg-color: var(--light-answer-text-bg-color);
-  --answer-text-color: var(--light-answer-text-color);
-  --advice-title-bg-color: var(--light-advice-title-bg-color);
-  --advice-title-color: var(--light-advice-title-color);
-  --button-color: var(--light-button-color);
+  --accent-color: var(--light-pink-1);
+  --title-color: var(--light-pink-2);
+  --page-bg-color: var(--light-pink-bg);
+  --header-text-bg-color: var(--light-pink-1);
+  --header-text-color: var(--light-black);
+  --question-bg-color:  var(--light-pink-bg);
+  --question-color:  var(--light-black);
+  --answer-title-bg-color: var(--light-pink-1);
+  --answer-title-color: var(--light-black);
+  --answer-text-bg-color: var(--light-pink-bg);
+  --answer-text-color: var(--light-black);
+  --advice-title-bg-color:  var(--light-pink-1) ;
+  --advice-title-color: var(--light-black);
+  --button-color: var(--light-black);
   --border-color-opacity: #32312D66;
   --background-image:  url("../images/cover-image-light.png");
+  --deco-color: var(--light-black);
 
 
 }
@@ -36,22 +37,23 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --accent-color: var(--light-accent);
-    --title-color: var(--light-title);
-    --page-bg-color: var(--light_page_bg);
-    --header_text-bg-color: var(--light-header-text_bg);
-    --header_text-color: var(--light-header_text-color);
-    --question-bg-color: var(--light-question-bg-color);
-    --question-color: var(--light-question-color);
-    --answer-title-bg-color: var(--light-answer-title-bg-color);
-    --answer-title-color: var(--light-answer-title-color);
-    --answer-text-bg-color: var(--light-answer-text-bg-color);
-    --answer-text-color: var(--light-answer-text-color);
-    --advice-title-bg-color: var(--light-advice-title-bg-color);
-    --advice-title-color: var(--light-advice-title-color);
-    --button-color: var(--light-button-color);
+    --accent-color: var(--light-pink-1);
+    --title-color: var(--light-pink-2);
+    --page-bg-color: var(--light-pink-bg);
+    --header-text-bg-color: var(--light-pink-1);
+    --header-text-color: var(--light-black);
+    --question-bg-color:  var(--light-pink-bg);
+    --question-color:  var(--light-black);
+    --answer-title-bg-color: var(--light-pink-1);
+    --answer-title-color: var(--light-black);
+    --answer-text-bg-color: var(--light-pink-bg);
+    --answer-text-color: var(--light-black);
+    --advice-title-bg-color:  var(--light-pink-1) ;
+    --advice-title-color: var(--light-black);
+    --button-color: var(--light-black);
     --border-color-opacity: #32312D66;
     --background-image:  url("../images/cover-image-light.png");
+    --deco-color: var(--light-black);
 
   }
 }

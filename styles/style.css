@@ -23,7 +23,7 @@
 }
 
 .header_text {
-  background-color: var(--header_text-bg-color);
+  background-color: var(--header-text-bg-color);
   color: var(--header_text-color);
   font-weight: bold;
   font-size: inherit;
@@ -85,8 +85,8 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--dark-red);
-  border-right: 1px solid var(--dark-red);
+  border-top: 1px solid var(--deco-color);
+  border-right: 1px solid var(--deco-color);
   top: var(--decoration-gap);
   right: var(--decoration-gap);
 }
@@ -100,8 +100,8 @@ footer.decorated-zone::before {
   position: absolute;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--dark-red);
-  border-left: 1px solid var(--dark-red);
+  border-bottom: 1px solid var(--deco-color);
+  border-left: 1px solid var(--deco-color);
   left: var(--decoration-gap);
   bottom: var(--decoration-gap);
 }
@@ -117,7 +117,7 @@ footer.decorated-zone::before {
 /*  margin-top: 40px;*/
 }
 
-.section:first-child {
+.section_1: {
   margin-top: var(--section-child-margin);
 }
 
@@ -368,6 +368,46 @@ footer.decorated-zone::before {
     background-color: var(--page-bg-color);
   }
 
+  .header {
+   margin-block-end: 0;
+   --min-height: 768px;
+  }
+
+  .footer {
+    --min-height: 768px;
+  }
+
+
+  .huge_title {
+    font-size: 157px;
+    line-height: 0.825;
+  }
+
+  .decorated-zone::after {
+    bottom: 32px;
+  }
+
+  .section_1 {
+      margin-top: 28px;
+      gap: 10px;
+  }
+
+  .question_1 {
+    margin-top: 20px;
+  }
+
+  .answers_1 {
+    margin-top: 0px;
+  }
+
+  .section_2 {
+    margin-top: 50px;
+  }
+
+  .header_text {
+    margin-top: 0;
+  }
+
   /* МЕНЮ  w3 */
   .header__theme-menu {
     height: 100%;
@@ -399,14 +439,27 @@ footer.decorated-zone::before {
 
   .question_2 {
     display: block;
-    width: 100%;
+    width: 30%;
     grid-area: question_2;
   }
 
   .answers_2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
     grid-area: answers_2;
+    margin-top: 77px;
   }
+
+  .section_3 {
+    gap: 10px;
+  }
+
+  footer.decorated-zone::after {
+    bottom: 38px;
+  }
+
+  .footer_title {
+    margin-top: 40px;
+}
 }
