@@ -18,6 +18,6 @@
   --header-margin-left: min(10px , 20px - 2.6vw);
   --section-child-margin: 40px;
   --project-font-family: "IBM Plex Mono", "Arial", "sans-serif";
-  --corner-thickness: 5px;
+  --corner-thickness: 1px;
 }
 
