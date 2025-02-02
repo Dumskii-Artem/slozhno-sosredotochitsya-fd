@@ -48,17 +48,17 @@
   right: var(--rec_empty_x_pos);
 }
 
-/* Александр, эти значения двигают REC туда , куда надо */
+/* Александр, эти значения двигают REC туда , куда надо, я установил наугад */
 /* проблема в моем PixelPerfect, я пока не знаю, как его установить правильно */
 @media (width >= 768px) {
   .theme-dark .rec_empty {
-    --rec_empty_x_pos: 30px;
+    --rec_empty_x_pos: 35px;
   }
 }
 
 @media (width >= 1024px) {
   .theme-dark .rec_empty {
-    --rec_empty_x_pos: 30px;
+    --rec_empty_x_pos: 50px;
   }
 }
 
