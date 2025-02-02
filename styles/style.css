@@ -2,13 +2,14 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  font-family: IBM Plex mono;
+  font-family: var(--project-font-family);
   font-weight: bold;
   font-size: var(--regular-font-size);
   line-height: 1.3;
   background-color: var(--page-bg-color);
   background-attachment: fixed;
   background-image: var(--background-image);
+  background-size: cover;
 }
 
 .header {
@@ -87,14 +88,10 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--deco-color);
-  border-right: 1px solid var(--deco-color);
+  border-top: var(--corner-thickness) solid var(--deco-color);
+  border-right: var(--corner-thickness) solid var(--deco-color);
   top: var(--decoration-gap);
   right: var(--decoration-gap);
-}
-
-footer.decorated-zone::before {
-  top: 50px;
 }
 
 .decorated-zone::after {
@@ -102,8 +99,8 @@ footer.decorated-zone::before {
   position: absolute;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--deco-color);
-  border-left: 1px solid var(--deco-color);
+  border-bottom: var(--corner-thickness) solid var(--deco-color);
+  border-left: var(--corner-thickness) solid var(--deco-color);
   left: var(--decoration-gap);
   bottom: var(--decoration-gap);
 }
@@ -119,15 +116,15 @@ footer.decorated-zone::before {
   margin-top: 40px;
 }
 
-.section_1: {
+.section_why: {
   margin-top: var(--section-child-margin);
 }
 
-.section_2 {
+.section_what {
   margin-top: 50px;
 }
 
-.section_3 {
+.section_how {
   margin-top: 50px;
 }
 
@@ -153,17 +150,18 @@ footer.decorated-zone::before {
 }
 
 .gallery__item {
-  margin: 0;
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .picture_question {
   margin-top: 50px;
-  margin-bottom: 10px;
+ /* margin-bottom: 10px;*/
 }
 
 .footer {
   height: max(100vh, var(--min-height));
-  padding: 10px;
   position: relative;
 }
 
@@ -175,7 +173,6 @@ footer.decorated-zone::before {
   line-height: 1.3;
   width: 100%;
   color: var(--question-color);
-  background-color: var(--question-bg-color);
 }
 
 
@@ -192,7 +189,7 @@ footer.decorated-zone::before {
   height: 100%;
   display: flex;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 .answer_title {
@@ -203,7 +200,7 @@ footer.decorated-zone::before {
 
 .answer_text {
   color: var(--answer-text-color);
-  background-color: var(--answer-text-bg-color);
+/*  background-color: var(--answer-text-bg-color);*/
   font-weight: normal;
 }
 
@@ -253,9 +250,14 @@ footer.decorated-zone::before {
   }
 
   .gallery {
+    grid-template-rows: auto;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding-top: 10px;
+/*
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 30px;*/
   }
 
 
@@ -263,38 +265,30 @@ footer.decorated-zone::before {
     --min-height: 1024px;
   }
 
-  /*sunset*/
-  .gallery__item:nth-child(1) {
+/*  .gallery__item:nth-child(1) {*/
+  .sunset_pic {
     grid-column: 1 / 3;
-    grid-row: 1 / 2;
+  /*  grid-row: 2 / 3;*/
   }
 
-  /*ice-cream*/
-  .gallery__item:nth-child(2) {
+  .ice-cream_pic {
     grid-column: 3 / 4;
-    grid-row: 1 / 3;
+    grid-row:  1 / 3;
   }
 
-  /*tape*/
-  .gallery__item:nth-child(3) {
+  .tape_pic {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
   }
 
-  /*books*/
-  .gallery__item:nth-child(4) {
+  .books_pic {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
   }
 
-  /*street*/
-  .gallery__item:nth-child(5) {
+  .street_pic {
     grid-column: 2 / 4;
     grid-row: 3 / 4;
-  }
-
-  .page {
-    background-color: var(--page-bg-color);
   }
 
   .header_text {
@@ -302,42 +296,43 @@ footer.decorated-zone::before {
     justify-self: right;
   }
 
-  .question_2 {
+  .question_what {
     margin-top: 30px;
     width: 30%;
   }
 
-  .question_3 {
+  .question_how {
     margin-top: 20px;
   }
 
-  .section_1 {
+  .section_why {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
-    'question_1 answers_1';
+    'question_why answers_why';
     gap: 20px;
   }
 
-  .section_2 {
+  .section_what {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0px;
   }
 
-  .section_3 {
+  .section_how {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
-    'question_3 answers_3';
+    'question_how answers_how';
     gap: 20px;
     margin-top: 61px;
   }
 
   .picture_question {
-    margin-top: 80px;
+    margin-top: 69px;
+    grid-column: 1 / 4;
   }
-
+/*
   footer.decorated-zone::before {
     top: 80px;
   }
@@ -345,7 +340,7 @@ footer.decorated-zone::before {
   footer.decorated-zone::after {
     bottom: 40px;
   }
-
+*/
   .footer_title {
     justify-content: center;
   }
@@ -353,10 +348,6 @@ footer.decorated-zone::before {
 
 /*прям большой*/
 @media (width >= 1024px) {
-  .page {
-    background-color: var(--page-bg-color);
-  }
-
   .header {
    margin-block-end: 0;
    --min-height: 768px;
@@ -376,20 +367,20 @@ footer.decorated-zone::before {
     bottom: 32px;
   }
 
-  .section_1 {
+  .section_why {
       margin-top: 40px;
       gap: 10px;
   }
 
-  .question_1 {
+  .question_why {
     margin-top: 20px;
   }
 
-  .answers_1 {
+  .answers_why {
     margin-top: 0px;
   }
 
-  .section_2 {
+  .section_what {
     margin-top: 50px;
   }
 
@@ -421,33 +412,33 @@ footer.decorated-zone::before {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "question_2 ."
-      "answers_2 answers_2";
+      "question_what ."
+      "answers_what answers_what";
     gap: 10px;
   }
 
-  .question_2 {
+  .question_what {
     display: block;
     width: 30%;
-    grid-area: question_2;
+    grid-area: question_what;
   }
 
-  .answers_2 {
+  .answers_what {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    grid-area: answers_2;
+    grid-area: answers_what;
     margin-top: 77px;
   }
 
-  .section_3 {
+  .section_how {
     gap: 10px;
   }
-
+/*
   footer.decorated-zone::after {
     bottom: 38px;
   }
-
+*/
   .footer_title {
     margin-top: 40px;
   }

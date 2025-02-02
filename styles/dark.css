@@ -9,24 +9,24 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-    --page-bg-color: var(--dark-black);
-    --accent-color: var(--dark-red);
+    --page-bg-color: var(--approximately-black);
+    --accent-color: var(--real-red);
     --title-color:  #db00ff;
-    --header-text-bg-color: var(--dark-red);
-    --header_text-color: var(--dark-black);
-    --question-bg-color: var(--dark-black);
-    --question-color: var(--dark-red);
-    --answer-title-bg-color: var(--dark-red);
-    --answer-title-color: var(--dark-black);
-    --answer-text-bg-color: var(--dark-black);
+    --header-text-bg-color: var(--real-red);
+    --header_text-color: var(--approximately-black);
+    --question-bg-color: var(--approximately-black);
+    --question-color: var(--real-red);
+    --answer-title-bg-color: var(--real-red);
+    --answer-title-color: var(--approximately-black);
+    --answer-text-bg-color: var(--approximately-black);
     --answer-text-color: #f1b2ce;
-    --advice-title-bg-color: var(--dark-red);
-    --advice-title-color: var(--dark-black);
-    --button-color: var(--dark-red);
-    --rec-color: var(--dark-red);
+    --advice-title-bg-color: var(--real-red);
+    --advice-title-color: var(--approximately-black);
+    --button-color: var(--real-red);
+    --rec-color: var(--real-red);
     --border-color-opacity: #FF007066;
     --background-image:  url("../images/cover-image-dark.png");
-    --deco-color: var(--dark-red);
+    --deco-color: var(--real-red);
 
 
     --rec_empty_x_pos: 20px;
@@ -76,25 +76,25 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --page-bg-color: var(--dark-black);
-    --accent-color: var(--dark-red);
+    --page-bg-color: var(--approximately-black);
+    --accent-color: var(--real-red);
     --title-color:  #db00ff;
-    --header-text-bg-color: var(--dark-red);
-    --header_text-color: var(--dark-black);
-    --question-bg-color: var(--dark-black);
-    --question-color: var(--dark-red);
-    --answer-title-bg-color: var(--dark-red);
-    --answer-title-color: var(--dark-black);
-    --answer-text-bg-color: var(--dark-black);
+    --header-text-bg-color: var(--real-red);
+    --header_text-color: var(--approximately-black);
+    --question-bg-color: var(--approximately-black);
+    --question-color: var(--real-red);
+    --answer-title-bg-color: var(--real-red);
+    --answer-title-color: var(--approximately-black);
+    --answer-text-bg-color: var(--approximately-black);
     --answer-text-color: #f1b2ce;
-    --advice-title-bg-color: var(--dark-red);
-    --advice-title-color: var(--dark-black);
-    --button-color: var(--dark-red);
-    --rec-color: var(--dark-red);
+    --advice-title-bg-color: var(--real-red);
+    --advice-title-color: var(--approximately-black);
+    --button-color: var(--real-red);
+    --rec-color: var(--real-red);
     --border-color-opacity: #FF007066;
     --border-color-opacity: #FF007066;
     --background-image:  url("../images/cover-image-dark.png");
-    --deco-color: var(--dark-red);
+    --deco-color: var(--real-red);
   }
 
   .rec_empty {
